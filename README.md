@@ -23,7 +23,25 @@ edges. Nothing is enclosed on more than three sides.
 
 ![back](img/back.png)
 
-## Printing on the Ender-3 V3 SE
+## Just print it
+
+`rpi3_wall_mount_Ender3V3SE_PLA_0.2mm.gcode` is sliced and ready. Drop it straight into
+OctoPrint's Files panel and hit print — no slicer needed.
+
+| | |
+|---|---|
+| Printer | Ender-3 V3 SE, 0.4 mm nozzle (stock OrcaSlicer vendor profile) |
+| Material | PLA, 220 °C nozzle / 55 °C bed |
+| Time | 2 h 58 m |
+| Filament | 47.5 g, 15.9 m |
+| Layers | 190 @ 0.2 mm |
+
+The first thing it does is draw two prime lines down the left edge of the bed at X≈-2.
+That is Creality's stock start G-code, not a mistake.
+
+Re-slice yourself only if you want a different material or nozzle.
+
+## Slicing it yourself
 
 Slice `rpi3_wall_mount.stl` exactly as exported — it already sits flat on the bed in the
 correct orientation.
@@ -121,6 +139,7 @@ GPIO header      OK
 
 | File | |
 |---|---|
-| `rpi3_wall_mount.scad` | parametric source |
+| `rpi3_wall_mount_Ender3V3SE_PLA_0.2mm.gcode` | ready to print, send straight to OctoPrint |
 | `rpi3_wall_mount.stl` | ready to slice |
+| `rpi3_wall_mount.scad` | parametric source |
 | `img/` | renders |
